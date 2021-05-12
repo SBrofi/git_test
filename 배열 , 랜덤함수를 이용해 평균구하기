@@ -1,0 +1,26 @@
+using System;
+
+namespace One
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n,i ,sum = 0;
+            Console.Write("학생의 수를 기입하시오 : ");
+            n = int.Parse(Console.ReadLine());
+            int[] scores = new int[n];
+            Random rand = new Random();
+            for( i = 0; i < n; i++)
+            {
+                scores[i] = rand.Next(60, 100);
+                Console.WriteLine(scores[i]);
+                sum += scores[i];
+            }
+            double average = (double)sum / scores.Length;
+
+            Console.WriteLine($"Average Score : {average}");
+
+        }
+    }
+}
